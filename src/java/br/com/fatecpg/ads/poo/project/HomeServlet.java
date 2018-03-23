@@ -1,5 +1,10 @@
+package br.com.fatecpg.ads.poo.web;
 
-package br.com.fatecpg.ads.poo.project;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,9 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Leticia
+ * @author maria
  */
-@WebServlet(name = "HomeServlet", urlPatterns = {"/home.php"})
+@WebServlet(urlPatterns = {"/home.php"})
 public class HomeServlet extends HttpServlet {
 
     /**
@@ -33,11 +38,50 @@ public class HomeServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Home</title>");            
+            out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
+            out.println("<title> JurosWeb </title>");    
+            out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Teste Página Home</h1>");
-            out.println("<h3><a href='home.html'>Voltar</a></h3>");
+            out.println("<nav class=\"navbar navbar-light\" style=\"background-color: #e3f2fd;\"> <a class=\"navbar-brand\" href=\"principal.php\">JurosWeb </a>");
+            out.println("</nav>");
+            out.println("<br>");
+            out.println("<div class=\"alert alert-success\" role=\"alert\">\n" +
+            "  <center> Conheça nossos desenvolvedores!</center>\n" +
+            "</div>");
+            out.println("<div class=\"card-deck\">\n" +
+            "  <div class=\"card\">\n" +
+            "    <img class=\"card-img-top\" src=\"foto-perfil.jpg\" alt=\"Allan Patrick\">\n" +
+            "    <div class=\"card-body\">\n" +
+            "      <center><h5 class=\"card-title\">Allan Patrick</h5></center>\n" +
+            "      <center><p class=\"card-text\"> Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
+            "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +        
+            "      <center><a href=\"https://github.com/allanpatrick1\" <button class=\"btn btn-primary\" type=\"submit\">GitHub</button></a></center>"+       
+            "    </div>\n" +
+            "  </div>\n" +
+            "  <div class=\"card\">\n" +
+            "    <img class=\"card-img-top\" src=\"foto-perfil.jpg\" alt=\"Andrey Antunes\">\n" +
+            "    <div class=\"card-body\">\n" +
+            "      <center><h5 class=\"card-title\">Andrey Antunes</h5></center>\n" +
+            "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
+            "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +        
+            "       <center><a href=\"https://github.com/AndreyAntunes\" <button class=\"btn btn-primary\" type=\"submit\">GitHub</button></a></center>"+
+            "    </div>\n" +
+            "  </div>\n" +
+            "  <div class=\"card\">\n" +
+            "    <img class=\"card-img-top\" src=\"foto-perfil.jpg\" alt=\"Leticia Santos\">\n" +
+            "    <div class=\"card-body\">\n" +
+            "      <center><h5 class=\"card-title\">Leticia Santos</h5></center>\n" +
+            "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
+            "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +
+            "       <center><a href=\"https://github.com/LeticiaVSantos\" <button class=\"btn btn-primary\" type=\"submit\">GitHub</button></a></center>"+        
+            "    </div>\n" +
+            "  </div>\n" +
+            "</div>"
+            + "");
+            out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n");
+            out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n");
+            out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>");
             out.println("</body>");
             out.println("</html>");
         }
