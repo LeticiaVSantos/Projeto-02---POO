@@ -1,4 +1,4 @@
-package br.com.fatecpg.ads.poo.web;
+package br.com.fatecpg.ads.poo.project;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author maria
+ * @author Leticia
  */
 @WebServlet(urlPatterns = {"/home.php"})
 public class HomeServlet extends HttpServlet {
@@ -51,7 +51,7 @@ public class HomeServlet extends HttpServlet {
             "</div>");
             out.println("<div class=\"card-deck\">\n" +
             "  <div class=\"card\">\n" +
-            "    <img class=\"card-img-top\" src=\"foto-perfil.jpg\" alt=\"Allan Patrick\">\n" +
+            "    <img class=\"card-img-top\" src=\"Imagens/OpenCamera.png\" alt=\"Allan Patrick\" width=\"170px\" height=\"380px\">\n" +
             "    <div class=\"card-body\">\n" +
             "      <center><h5 class=\"card-title\">Allan Patrick</h5></center>\n" +
             "      <center><p class=\"card-text\"> Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
@@ -60,7 +60,7 @@ public class HomeServlet extends HttpServlet {
             "    </div>\n" +
             "  </div>\n" +
             "  <div class=\"card\">\n" +
-            "    <img class=\"card-img-top\" src=\"foto-perfil.jpg\" alt=\"Andrey Antunes\">\n" +
+            "    <img class=\"card-img-top\" src=\"Imagens/OpenCamera.png\" alt=\"Andrey Antunes\" width=\"170px\" height=\"380px\">\n" +
             "    <div class=\"card-body\">\n" +
             "      <center><h5 class=\"card-title\">Andrey Antunes</h5></center>\n" +
             "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
@@ -69,7 +69,7 @@ public class HomeServlet extends HttpServlet {
             "    </div>\n" +
             "  </div>\n" +
             "  <div class=\"card\">\n" +
-            "    <img class=\"card-img-top\" src=\"foto-perfil.jpg\" alt=\"Leticia Santos\">\n" +
+            "    <img class=\"card-img-top\" src=\"Imagens/OpenCamera.png\" alt=\"Leticia Santos\" width=\"170px\" height=\"380px\">\n" +
             "    <div class=\"card-body\">\n" +
             "      <center><h5 class=\"card-title\">Leticia Santos</h5></center>\n" +
             "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
