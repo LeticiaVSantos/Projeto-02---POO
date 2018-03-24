@@ -38,6 +38,8 @@ public class HomeServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">");
+            out.println("<link href=\"https://fonts.googleapis.com/css?family=PT+Sans\" rel=\"stylesheet\">");
             out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
             out.println("<title> JurosWeb </title>");    
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
@@ -72,10 +74,12 @@ public class HomeServlet extends HttpServlet {
             out.println("<div class=\"alert alert-success\" role=\"alert\">\n" +
             "  <center> Conheça nossos desenvolvedores!</center>\n" +
             "</div>");
+            out.println("<br>");  
+                 
             
             out.println("<div class=\"card-deck\">\n" +
             "  <div class=\"card\">\n" +
-            "    <img class=\"card-img-top\" src=\"Imagens/OpenCamera_1.png\" alt=\"Allan Patrick\" width=\"170px\" height=\"380px\">\n" +
+            "    <center><img class=\"card-img-top\" src=\"Imagens/OpenCamera_1.png\" alt=\"Allan Patrick\" style='width:50%'></center>\n" +
             "    <div class=\"card-body\">\n" +
             "      <center><h5 class=\"card-title\">Allan Patrick</h5></center>\n" +
             "      <center><p class=\"card-text\"> Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
@@ -85,7 +89,7 @@ public class HomeServlet extends HttpServlet {
             "  </div>\n" +
                     
             "  <div class=\"card\">\n" +
-            "    <img class=\"card-img-top\" src=\"Imagens/OpenCamera_1.png\" alt=\"Andrey Antunes\" width=\"170px\" height=\"380px\">\n" +
+            "    <center><img class=\"card-img-top\" src=\"Imagens/OpenCamera_1.png\" alt=\"Andrey Antunes\" style='width:50%'></center>\n" +
             "    <div class=\"card-body\">\n" +
             "      <center><h5 class=\"card-title\">Andrey Antunes</h5></center>\n" +
             "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
@@ -95,7 +99,7 @@ public class HomeServlet extends HttpServlet {
             "  </div>\n" +
                     
             "  <div class=\"card\">\n" +
-            "    <img class=\"card-img-top\" src=\"Imagens/OpenCamera_1.png\" alt=\"Leticia Santos\" width=\"170px\" height=\"380px\">\n" +
+            "    <center><img class=\"card-img-top\" src=\"Imagens/OpenCamera_1.png\" alt=\"Leticia Santos\" style='width:50%'></center>\n" +
             "    <div class=\"card-body\">\n" +
             "      <center><h5 class=\"card-title\">Leticia Santos</h5></center>\n" +
             "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
@@ -104,7 +108,33 @@ public class HomeServlet extends HttpServlet {
             "    </div>\n" +
             "  </div>\n" +
             "</div>");
-       
+            
+            out.println("<hr>");
+            
+            out.println("<style>\n" +
+            ".footer {\n" +
+            "    position: fixed-top;\n" +
+            "    left: 0;\n" +
+            "    bottom: 0;\n" +
+            "    width: 100%;\n" +
+            "    height:60%;\n " +        
+            "    background-color:#82868E;\n" +
+            "    font-family: 'PT Sans', sans-serif;"+        
+            "    color: black;\n" +
+            "    text-align: center;\n" +
+            "}\n" +
+            "</style>\n" +
+            "\n" +
+                   
+                    
+            "<div class=\"footer\">\n" +
+                    "<br>" +
+                    "<h5>Footer Content</h5>" +
+                "<p>Here you can use rows and columns here to organize your footer content.</p>" +
+                "  <p>© 2018 Copyright:</p>\n" +
+                "<link href=\"https://github.com/LeticiaVSantos/Projeto-02---POO/\" rel=\"stylesheet\"> GitHub.com"+    
+            "</div>");
+            
             out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n");
             out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n");
             out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>");
