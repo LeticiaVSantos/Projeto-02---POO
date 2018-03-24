@@ -37,10 +37,12 @@ public class jurosSimples extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            /*Google fonts - footer*/
+            out.println("<link href=\"https://fonts.googleapis.com/css?family=PT+Sans\" rel=\"stylesheet\">");
              /*Favicon*/
             out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
             out.println("<title> JurosWeb </title>");  
-            /*Java Script - Bootstrap*/
+            /*css - Bootstrap*/
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("<title>Juros Simples</title>");            
             out.println("</head>");
@@ -50,15 +52,12 @@ public class jurosSimples extends HttpServlet {
             "<img src=\"Imagens/cifrao.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\n" +
             "JurosWeb\n" +     
             "</a>\n" +
-                    
-            "<nav class='nav-item active'>" +
-            "<a class='nav-link' href='juros-simples.php'>Juros Simples <span class='sr-only'>(current)</span></a>" +
-            "</nav>" +
-                    
+     
             "<span class='navbar-text'>"+
             "JurosWeb, a solução."+
             "</span>"+
             "</nav>");
+            
             out.println("<h1>Juros Simples</h1>");
             out.println("<h4><a href='home.php'>Voltar</a></h4>");
             out.println("<h2>Cálculo de juros simples</h2>");
@@ -91,6 +90,32 @@ public class jurosSimples extends HttpServlet {
                 out.println("Ação não concluída. Insira apenas números!");
                 out.println("<hr/>");
             }
+            
+            /*css - Footer*/
+            out.println("<style>\n" +
+            ".footer {\n" +
+            "    position: fixed;\n" +
+            "    left: 0;\n" +
+            "    bottom: 0;\n" +
+            "    width: 100%;\n" +
+            "    height:25%;\n " +        
+            "    background-color:#82868E;\n" +
+            "    font-family: 'PT Sans', sans-serif;"+        
+            "    color: black;\n" +
+            "    text-align: center;\n" +
+            "}\n" +
+            "</style>\n" +
+            "\n" +
+                   
+                    
+            "<div class=\"footer\">\n" +
+                    "<br>" +
+                    "<h5>Footer Content</h5>" +
+                "<p>Here you can use rows and columns here to organize your footer content.</p>" +
+                "  <p>© 2018 Copyright:</p>\n" +
+                "<link href=\"https://github.com/LeticiaVSantos/Projeto-02---POO/\" rel=\"stylesheet\"> GitHub.com"+    
+            "</div>");
+            /*fim css - Footer*/
             
              /*Java Script - Bootstrap*/
             out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n");

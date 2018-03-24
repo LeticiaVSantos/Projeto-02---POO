@@ -37,6 +37,8 @@ public class jurosComposto extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            /*Google fonts - footer*/
+            out.println("<link href=\"https://fonts.googleapis.com/css?family=PT+Sans\" rel=\"stylesheet\">");
              /*Favicon*/
             out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
             out.println("<title> JurosWeb </title>");
@@ -46,6 +48,32 @@ public class jurosComposto extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet jurosComposto at " + request.getContextPath() + "</h1>");
+            
+            /*css - Footer*/
+            out.println("<style>\n" +
+            ".footer {\n" +
+            "    position: fixed;\n" +
+            "    left: 0;\n" +
+            "    bottom: 0;\n" +
+            "    width: 100%;\n" +
+            "    height:25%;\n " +        
+            "    background-color:#82868E;\n" +
+            "    font-family: 'PT Sans', sans-serif;"+        
+            "    color: black;\n" +
+            "    text-align: center;\n" +
+            "}\n" +
+            "</style>\n" +
+            "\n" +
+                   
+                    
+            "<div class=\"footer\">\n" +
+                    "<br>" +
+                    "<h5>Footer Content</h5>" +
+                "<p>Here you can use rows and columns here to organize your footer content.</p>" +
+                "  <p>© 2018 Copyright:</p>\n" +
+                "<link href=\"https://github.com/LeticiaVSantos/Projeto-02---POO/\" rel=\"stylesheet\"> GitHub.com"+    
+            "</div>");
+            /*fim css - Footer*/
             
             /*Java Script - Bootstrap*/
             out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n");

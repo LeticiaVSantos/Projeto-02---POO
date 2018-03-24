@@ -38,7 +38,6 @@ public class HomeServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">");
             out.println("<link href=\"https://fonts.googleapis.com/css?family=PT+Sans\" rel=\"stylesheet\">");
             out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
             out.println("<title> JurosWeb </title>");    
@@ -49,13 +48,8 @@ public class HomeServlet extends HttpServlet {
             out.println("<nav class=\"navbar sticky-top navbar-dark bg-dark\">\n" +
             "<a class=\"navbar-brand\" href=\"home.php\">\n" +         
             "<img src=\"Imagens/cifrao.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\n" +
-            "JurosWeb\n" + 
-             
-                    
-            "</a>\n" +
-                    
-     
-                    
+            "JurosWeb\n" +       
+            "</a>\n" +  
             "<span class='navbar-text'>"+
             "JurosWeb, a solução."+
             "</span>"+
