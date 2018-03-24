@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-@WebServlet(name = "juros-simples", urlPatterns = {"/juros-simples"})
+@WebServlet(name = "juros-simples.php", urlPatterns = {"/juros-simples.php"})
 public class jurosSimples extends HttpServlet {
 
     /**
@@ -37,11 +37,30 @@ public class jurosSimples extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+             /*Favicon*/
+            out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
+            out.println("<title> JurosWeb </title>");  
+            /*Java Script - Bootstrap*/
+            out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("<title>Juros Simples</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println("<nav class=\"navbar sticky-top navbar-dark bg-dark\">\n" +
+            "<a class=\"navbar-brand\" href=\"home.php\">\n" +         
+            "<img src=\"Imagens/cifrao.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\n" +
+            "JurosWeb\n" +     
+            "</a>\n" +
+                    
+            "<nav class='nav-item active'>" +
+            "<a class='nav-link' href='juros-simples.php'>Juros Simples <span class='sr-only'>(current)</span></a>" +
+            "</nav>" +
+                    
+            "<span class='navbar-text'>"+
+            "JurosWeb, a solução."+
+            "</span>"+
+            "</nav>");
             out.println("<h1>Juros Simples</h1>");
-            out.println("<h4><a href='index.html'>Voltar</a></h4>");
+            out.println("<h4><a href='home.php'>Voltar</a></h4>");
             out.println("<h2>Cálculo de juros simples</h2>");
             out.println("<hr/>");
             out.println("<form>");
@@ -72,6 +91,12 @@ public class jurosSimples extends HttpServlet {
                 out.println("Ação não concluída. Insira apenas números!");
                 out.println("<hr/>");
             }
+            
+             /*Java Script - Bootstrap*/
+            out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n");
+            out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n");
+            out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>");
+            
             out.println("</body>");
             out.println("</html>");
             

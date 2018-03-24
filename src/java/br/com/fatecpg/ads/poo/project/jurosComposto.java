@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-@WebServlet(name = "juros-composto", urlPatterns = {"/juros-composto"})
+@WebServlet(name = "juros-composto.php", urlPatterns = {"/juros-composto.php"})
 public class jurosComposto extends HttpServlet {
 
     /**
@@ -37,10 +37,21 @@ public class jurosComposto extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+             /*Favicon*/
+            out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
+            out.println("<title> JurosWeb </title>");
+             /*css - Bootstrap*/
+            out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("<title>Servlet jurosComposto</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet jurosComposto at " + request.getContextPath() + "</h1>");
+            
+            /*Java Script - Bootstrap*/
+            out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n");
+            out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n");
+            out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>");
+            
             out.println("</body>");
             out.println("</html>");
         }
