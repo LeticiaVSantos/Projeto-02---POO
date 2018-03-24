@@ -57,6 +57,7 @@ public class HomeServlet extends HttpServlet {
             "</nav>");
             
             out.println("<br>");
+            
             out.println("<div class=\"jumbotron jumbotron-fluid\">\n" +
             "<div class=\"container\">\n" +
             "<h1 class=\"display-4\">JurosWeb</h1>\n" +
@@ -64,24 +65,32 @@ public class HomeServlet extends HttpServlet {
             "  </div>\n" +
             "</div>");
             
-            out.println("<div class=\"card border-primary mb-3\" style=\"max-width: 30rem;\">\n" +
-            "  <div class=\"card-header\">Juros Simples</div>\n" +
-            "  <div class=\"card-body text-primary\">\n" +
-            "    <h5 class=\"card-title\">Calcular Juros Simples</h5>\n" +
-            "    <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p>\n" +
-            "      <center><a href=\"juros-simples.php\" <button class=\"btn btn-primary\" type=\"submit\">Calcular</button></a></center>"+  
-            "  </div>" +
-            "  </div>" +
+ 
+            out.println("<div class='row'>" + 
+            "<div class='col-sm-6'>" +
+           "<div class=\"card border-primary mb-3\" style=\"max-width: 30rem;\"\n >" +
+          "<div class='card-body'>" +
+        "<center><h5 class='card-title'>Juros Simples</h5></center>" +
+        "<hr>"+            
+        "<p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>" +
+        "<center><a href='juros-simples.php' class='btn btn-primary'>Calcular</a></center>" +
+      "</div>" +
+      "</div>" +
+    "</div>" +
+                    
+  "<div class='col-sm-6'>" +
+     "<div class=\"card border-secondary mb-3\" style=\"max-width: 30rem;\" \n >" +
+      "<div class='card-body'>" +
+        "<center><h5 class='card-title'>Juros Composto</h5></center>" +
+         "<hr>"+            
+        "<p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>" +
+        " <center><a href='juros-composto.php' class='btn btn-primary'>Calcular</a></center>" +
+      " </div>" +
+    "</div>" +
+  "</div>" +
+"</div>");
             
-            "<div class=\"card border-secondary mb-3\" style=\"max-width: 30rem;\">" +
-            "<div class='card-header'>Juros Composto</div>"+
-            "<div class='card-body text-secondary'>" +
-            "<h5 class='card-title'>Calcular Juros Composto</h5>"+
-            "<p class='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>" +
-                 "<center><a href=\"juros-composto.php\" <button class=\"btn btn-primary\" type=\"submit\">Calcular</button></a></center>"+
-            "</div>" +
-            "  </div>");
-           
+            
             out.println("<br>");
             
             out.println("<div class=\"alert alert-success\" role=\"alert\">\n" +
@@ -91,7 +100,7 @@ public class HomeServlet extends HttpServlet {
                  
             
             out.println("<div class=\"card-deck\">\n" +
-            "  <div class=\"card\">\n" +
+            "  <div class=\"card border-primary mb-3\">\n" +
             "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Allan.jpg\" alt=\"Allan Patrick\" style='width:50%'></center>\n" +
             "    <div class=\"card-body\">\n" +
             "      <center><h5 class=\"card-title\">Allan Patrick</h5></center>\n" +
@@ -101,7 +110,7 @@ public class HomeServlet extends HttpServlet {
             "    </div>\n" +
             "  </div>\n" +
                     
-            "  <div class=\"card\">\n" +
+            "  <div class=\"card border-primary mb-3\">\n" +
             "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Andrey.jpg\" alt=\"Andrey Antunes\"  style='width:50%'></center>\n" +
             "    <div class=\"card-body\">\n" +
             "      <center><h5 class=\"card-title\">Andrey Antunes</h5></center>\n" +
@@ -111,7 +120,7 @@ public class HomeServlet extends HttpServlet {
             "    </div>\n" +
             "  </div>\n" +
                     
-            "  <div class=\"card\">\n" +
+            "  <div class=\"card border-primary mb-3\">\n" +
             "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Leticia (2).jpg\" alt=\"Leticia Santos\" style='width:50%'></center>\n" +
             "    <div class=\"card-body\">\n" +
             "      <center><h5 class=\"card-title\">Leticia Santos</h5></center>\n" +
