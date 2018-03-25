@@ -41,7 +41,7 @@ public class jurosSimples extends HttpServlet {
             /*Tag meta Responsiva*/
             out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
             /*Google fonts - footer*/
-            out.println("<link href=\"https://fonts.googleapis.com/css?family=PT+Sans\" rel=\"stylesheet\">");
+            out.println("<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>");
              /*Favicon*/
             out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
             out.println("<title> JurosWeb </title>");  
@@ -49,6 +49,7 @@ public class jurosSimples extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("<title>Juros Simples</title>");            
             out.println("</head>");
+            
             out.println("<body style=\"background-color: black;\">");
             out.println("<nav class=\"navbar sticky-top navbar-dark bg-dark\">\n" +
             "<a class=\"navbar-brand\" href=\"home.php\">\n" +         
@@ -61,16 +62,34 @@ public class jurosSimples extends HttpServlet {
             "</span>"+
             "</nav>");
             
-            out.println("<h1 style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 1%;width: 50%;top: 1%;\">Cálculo de juros simples</h1>");
-            out.println("<hr/ style=\"background-color: #b8c1c1;\">");
-            out.println("<form style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width: 21%;\">");
-            out.println("Aplicação: <input type='text' style=\"width: 202px;\" name='aplicacao'/><br><br>");
-            out.println("Período: <input type='text' style=\"width: 215px;\" name='periodo'/><br><br>");
-            out.println("Taxa: <input type='text' style=\"width: 234px;\" name='taxa'/><br><br>");
+            out.println("<center><h1 style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 1%;width: 50%;top: 1%;\">Cálculo de juros simples</h1></center>"+
+            "<hr/ style=\"background-color: #b8c1c1;\">" +
             
-            out.println("<input type= 'submit' style=\"width: 280px;\" value='Calcular'/>");
-            out.println("</form>");
-            out.println("<br>");
+            "<center><form style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative; width: 20%;\">" +
+            "<div class='row'>" +
+            "<div class='col'>" +
+            "Aplicação:<input type='text' style=\"width: 202px;\" class='form-control' placeholder='aplicacao'><br><br>" +
+            "</div>" + 
+                    
+            "<div class='col'>" +
+            "Período:<input type='text' style=\"width: 215px;\" class='form-control' placeholder='periodo'><br><br>" +
+            "</div>" +   
+
+            "<div class='col'>" +
+            "Taxa:<input type='text' style=\"width: 230px;\" class='form-control' placeholder='taxa'><br><br>" +
+            "</div>" +         
+            
+            "<input class=\"btn btn-primary\" type=\"button\" style=\"width: 280px;\" value='Calcular'/>" +
+            "</div>" +
+            "</div>" +      
+                    
+           
+                    
+            "</form></center>");
+                
+                    
+            
+            
             try{
                 //variáveis.
                 int periodo=Integer.parseInt(request.getParameter("periodo"));
@@ -90,11 +109,15 @@ public class jurosSimples extends HttpServlet {
             }
             //aviso para digitar apenas números.
             catch(NumberFormatException nfe){
+                out.println("<br>");
                 out.println("<p style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width: 22%;\">Lembre-se: Digite apenas valores válidos.");
-                out.println("<hr/ style=\"background-color: #b8c1c1;\">");
+                
             }
-            out.println("<h4><a href='home.php' style=\"position: relative;left: 1%;\">Voltar</a></h4>");
-            out.println("<h4><a href='juros-composto.php' style=\"position: relative;left: 1%;\">Juros Composto</a></h4>");
+            out.println("<br><br>");
+            out.println("<a href='home.php'class=\"btn btn-primary btn-lg active\" role=\"button\" style=\"left: 2%;\" aria-pressed=\"true\">Voltar</a>");
+            out.println("<a href='juros-composto.php' class=\"btn btn-secondary btn-lg active\" role=\"button\" aria-pressed=\"true\"style=\"left: 6%;\">Juros Composto</a><br>");
+            
+            
             
             /*out.println("<div class=\"container\" style=\"background-color:white;\">" +
   "<h2 style=\"font-family:tahoma; font-size:3rem;\ position: relative;left: 2%">Cálculo de juros simples</h2>" +
@@ -106,13 +129,13 @@ public class jurosSimples extends HttpServlet {
             /*css - Footer*/
             out.println("<style>\n" +
             ".footer {\n" +
-            "    position: fixed;\n" +
+            "    position: relative;\n" +
             "    left: 0;\n" +
             "    bottom: 0;\n" +
             "    width: 100%;\n" +
-            "    height:25%;\n " +        
+            "    height:19%;\n " +        
             "    background-color:#82868E;\n" +
-            "    font-family: 'PT Sans', sans-serif;"+        
+            "    font-family: 'Raleway', sans-serif;" +      
             "    color: black;\n" +
             "    text-align: center;\n" +
             "}\n" +
@@ -123,7 +146,7 @@ public class jurosSimples extends HttpServlet {
                     "<h5>Footer Content</h5>" +
                 "<p>Here you can use rows and columns here to organize your footer content.</p>" +
                 "  <p>© 2018 Copyright:</p>\n" +
-                "<link href=\"https://github.com/LeticiaVSantos/Projeto-02---POO/\" rel=\"stylesheet\"> GitHub.com"+    
+                "Projeto Servlests"+    
             "</div>");
             /*fim css - Footer*/
             

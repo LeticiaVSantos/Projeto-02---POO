@@ -48,8 +48,22 @@ public class jurosComposto extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("<title>Servlet jurosComposto</title>");            
             out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet jurosComposto at " + request.getContextPath() + "</h1>");
+            out.println("<body style=\"background-color: black;\">");
+            
+            /*navbar */
+            out.println("<nav class=\"navbar sticky-top navbar-dark bg-dark\">\n" +
+            "<a class=\"navbar-brand\" href=\"home.php\">\n" +         
+            "<img src=\"Imagens/cifrao.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\n" +
+            "JurosWeb\n" +       
+            "</a>\n" +  
+            "<span class='navbar-text'>"+
+            "JurosWeb, a solução."+
+            "</span>"+
+            "</nav>");
+            
+            out.println("<br><br>");
+            out.println("<a href='home.php'class=\"btn btn-primary btn-lg active\" role=\"button\" style=\"left: 2%;\" aria-pressed=\"true\">Voltar</a>");
+            out.println("<a href='juros-simples.php' class=\"btn btn-secondary btn-lg active\" role=\"button\" aria-pressed=\"true\"style=\"left: 6%;\">Juros Simples</a><br>");
             
             /*css - Footer*/
             out.println("<style>\n" +
@@ -58,7 +72,7 @@ public class jurosComposto extends HttpServlet {
             "    left: 0;\n" +
             "    bottom: 0;\n" +
             "    width: 100%;\n" +
-            "    height:25%;\n " +        
+            "    height:19%;\n " +        
             "    background-color:#82868E;\n" +
             "    font-family: 'PT Sans', sans-serif;"+        
             "    color: black;\n" +
@@ -67,13 +81,13 @@ public class jurosComposto extends HttpServlet {
             "</style>\n" +
             "\n" +
                    
-                    
+            /*ainda precisa ser editado*/        
             "<div class=\"footer\">\n" +
                     "<br>" +
                     "<h5>Footer Content</h5>" +
                 "<p>Here you can use rows and columns here to organize your footer content.</p>" +
                 "  <p>© 2018 Copyright:</p>\n" +
-                "<link href=\"https://github.com/LeticiaVSantos/Projeto-02---POO/\" rel=\"stylesheet\"> GitHub.com"+    
+                "Projeto Servlets"+    
             "</div>");
             /*fim css - Footer*/
             

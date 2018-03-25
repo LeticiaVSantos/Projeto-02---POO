@@ -39,7 +39,7 @@ public class HomeServlet extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-            out.println("<link href=\"https://fonts.googleapis.com/css?family=PT+Sans\" rel=\"stylesheet\">");
+            out.println("<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>");
             out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
             out.println("<title> JurosWeb </title>");    
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
@@ -61,34 +61,38 @@ public class HomeServlet extends HttpServlet {
             out.println("<div class=\"jumbotron jumbotron-fluid\" style=\"background-color: lightseagreen;\">\n" +
             "<div class=\"container\">\n" +
             "<h1 class=\"display-4\">JurosWeb</h1>\n" +
-            "    <p class=\"lead\">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>\n" +
-            "  </div>\n" +
+            "<p class=\"lead\">Uma maneira simples e eficiente para o cálculo de juros simples e composto.</p>\n" +
+            "</div>\n" +
             "</div>");
             
  
             out.println("<div class='row' style=\"width: 80%;position: relative;left: 7%;\">" + 
             "<div class='col-sm-6'>" +
-           "<div class=\"card border-primary mb-3\" style=\"max-width: 30rem;\"\n >" +
-          "<div class='card-body' style=\"background-color: lightsteelblue;border-color: black;\">" +
-        "<center><h5 class='card-title'>Juros Simples</h5></center>" +
-        "<hr>"+            
-        "<p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>" +
-        "<center><a href='juros-simples.php' class='btn btn-primary'>Calcular</a></center>" +
-      "</div>" +
-      "</div>" +
-    "</div>" +
+            "<div class=\"card border-primary mb-3\" style=\"max-width: 30rem;\"\n >" +
+            "<div class='card-body' style=\"background-color: lightsteelblue;border-color: black;\">" +
+            "<center><h5 class='card-title'>Juros Simples</h5></center>" +
+            "<hr>"+            
+            "<center><p class='card-text'>É muito utilizado do dia a dia quando emprestamos dinheiro a outra pessoa, por exemplo." +
+            " Uma espécie de \"te empresto, mas quero que me pague a mais por isso\".</p></center>" + 
+            "<br>" +       
+            "<center><a href='juros-simples.php' class='btn btn-primary'>Calcular</a></center>" +
+            "</div>" +
+            "</div>" +
+            "</div>" +
                     
-  "<div class='col-sm-6' style=\"position: relative;left: 13%;\">" +
-     "<div class=\"card border-secondary mb-3\" style=\"max-width: 30rem;\" \n >" +
-      "<div class='card-body' style=\"background-color: lightsteelblue;border-color: black;\">" +
-        "<center><h5 class='card-title'>Juros Composto</h5></center>" +
-         "<hr>"+            
-        "<p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>" +
-        " <center><a href='juros-composto.php' class='btn btn-primary'>Calcular</a></center>" +
-      " </div>" +
-    "</div>" +
-  "</div>" +
-"</div>");
+            "<div class='col-sm-6' style=\"position: relative;left: 13%;\">" +
+            "<div class=\"card border-secondary mb-3\" style=\"max-width: 30rem;\" \n >" +
+            "<div class='card-body' style=\"background-color: lightsteelblue;border-color: black;\">" +
+            "<center><h5 class='card-title'>Juros Composto</h5></center>" +
+            "<hr>"+            
+            "<center><p class='card-text'>São utilizados pelo sistema financeiro, pois oferece uma rentabilidade melhor." +
+            " A taxa de juros é sempre aplicada ao somatório do capital no final do mês. </p></center>"+ 
+            "<br>" +        
+            " <center><a href='juros-composto.php' class='btn btn-primary'>Calcular</a></center>" +
+            " </div>" +
+            "</div>" +
+            "</div>" +
+            "</div>");
             
             
             out.println("<br>");
@@ -101,32 +105,36 @@ public class HomeServlet extends HttpServlet {
             
             out.println("<div class=\"card-deck\" style=\"width: 100%;position: relative;left: 1%;\">\n" +
             "  <div class=\"card border-primary mb-3\" style=\"background-color: #ced5e5;\">\n" +
+            "<br>" + 
             "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Allan.jpg\" alt=\"Allan Patrick\" style=\"width:50%;position: relative;bottom: -5%;\"></center>\n" +
             "    <div class=\"card-body\" style=\"background-color: #ced5e5;\">\n" +
             "      <center><h5 class=\"card-title\">Allan Patrick</h5></center>\n" +
-            "      <center><p class=\"card-text\"> Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
+            "      <center><p class=\"card-text\"> Estutande de Análise e Desenvolvimento de Sistemas Fatec - Praia Grande.</p></center>\n" +
             "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +        
-            "      <center><a href=\"https://github.com/allanpatrick1\" <button class=\"btn btn-primary\" type=\"submit\">GitHub</button></a></center>"+       
+            "      <center><a href=\"https://github.com/allanpatrick1\" <button class=\"btn btn-primary\">GitHub</button></a></center>"+       
             "    </div>\n" +
             "  </div>\n" +
                     
             "  <div class=\"card border-primary mb-3\" style=\"background-color: #ced5e5;\">\n" +
+            "<br>" +         
             "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Andrey.jpg\" alt=\"Andrey Antunes\"  style=\"width:50%;position: relative;bottom: -5%;\"></center>\n" +
             "    <div class=\"card-body\" style=\"background-color: #ced5e5;\">\n" +
             "      <center><h5 class=\"card-title\">Andrey Antunes</h5></center>\n" +
-            "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
+            "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas Fatec - Praia Grande.</p></center>\n" +
             "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +        
-            "       <center><a href=\"https://github.com/AndreyAntunes\" <button class=\"btn btn-primary\" type=\"submit\">GitHub</button></a></center>"+
+            "       <center><a href=\"https://github.com/AndreyAntunes\" <button class='btn btn-primary'>GitHub</button></a></center>"+
             "    </div>\n" +
             "  </div>\n" +
-                    
+             
+                  
             "  <div class=\"card border-primary mb-3\" style=\"background-color: #ced5e5;\">\n" +
-            "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Leticia (2).jpg\" alt=\"Leticia Santos\" style=\"width:50%;position: relative;bottom: -5%;\"></center>\n" +
+            "<br>" +                    
+            "    <center><img  class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Leticia (2).jpg\" alt=\"Leticia Santos\" style=\"width:50%;position: relative;bottom: -5%;\"></center>\n" +
             "    <div class=\"card-body\" style=\"background-color: #ced5e5;\">\n" +
             "      <center><h5 class=\"card-title\">Leticia Santos</h5></center>\n" +
-            "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
+            "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas Fatec - Praia Grande.</p></center>\n" +
             "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +
-            "       <center><a href=\"https://github.com/LeticiaVSantos\" <button class=\"btn btn-primary\" type=\"submit\">GitHub</button></a></center>"+        
+            "       <center><a href=\"https://github.com/LeticiaVSantos\" <button class=\"btn btn-primary\" >GitHub</button></a></center>"+        
             "    </div>\n" +
             "  </div>\n" +
             "</div>");
@@ -135,13 +143,13 @@ public class HomeServlet extends HttpServlet {
             
             out.println("<style>\n" +
             ".footer {\n" +
-            "    position: fixed-top;\n" +
+            "    position: relative;\n" +
             "    left: 0;\n" +
             "    bottom: 0;\n" +
             "    width: 100%;\n" +
             "    height:60%;\n " +        
             "    background-color:#82868E;\n" +
-            "    font-family: 'PT Sans', sans-serif;"+        
+            "    font-family: 'Raleway', sans-serif;" +        
             "    color: black;\n" +
             "    text-align: center;\n" +
             "}\n" +
@@ -150,11 +158,11 @@ public class HomeServlet extends HttpServlet {
                    
                     
             "<div class=\"footer\">\n" +
-                    "<br>" +
-                    "<h5>Footer Content</h5>" +
-                "<p>Here you can use rows and columns here to organize your footer content.</p>" +
-                "  <p>© 2018 Copyright:</p>\n" +
-                "<link href=\"https://github.com/LeticiaVSantos/Projeto-02---POO/\" rel=\"stylesheet\"> GitHub.com"+    
+            "<br>" +
+            "<h5>Footer Content</h5>" +
+            "<p>Here you can use rows and columns here to organize your footer content.</p>" +
+            "<p>© 2018 Copyright:</p>\n" +
+            "Projeto Servlets"+    
             "</div>");
             
             out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n");
