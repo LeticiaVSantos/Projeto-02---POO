@@ -75,7 +75,7 @@ public class HomeServlet extends HttpServlet {
             "<center><p class='card-text'>É muito utilizado do dia a dia quando emprestamos dinheiro a outra pessoa, por exemplo." +
             " Uma espécie de \"te empresto, mas quero que me pague a mais por isso\".</p></center>" + 
             "<br>" +       
-            "<center><a href='juros-simples.php' class='btn btn-primary'>Calcular</a></center>" +
+            "<center><a href='juros-simples.php' class='btn btn-primary' style=\"background-color: lightseagreen;border-color: lightseagreen;color: black;\">Calcular</a></center>" +
             "</div>" +
             "</div>" +
             "</div>" +
@@ -88,7 +88,7 @@ public class HomeServlet extends HttpServlet {
             "<center><p class='card-text'>São utilizados pelo sistema financeiro, pois oferece uma rentabilidade melhor." +
             " A taxa de juros é sempre aplicada ao somatório do capital no final do mês. </p></center>"+ 
             "<br>" +        
-            " <center><a href='juros-composto.php' class='btn btn-primary'>Calcular</a></center>" +
+            " <center><a href='juros-composto.php' class='btn btn-primary' style=\"background-color: lightseagreen;border-color: lightseagreen;color: black;\">Calcular</a></center>" +
             " </div>" +
             "</div>" +
             "</div>" +
@@ -111,7 +111,7 @@ public class HomeServlet extends HttpServlet {
             "      <center><h5 class=\"card-title\">Allan Patrick</h5></center>\n" +
             "      <center><p class=\"card-text\"> Estutande de Análise e Desenvolvimento de Sistemas Fatec - Praia Grande.</p></center>\n" +
             "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +        
-            "      <center><a href=\"https://github.com/allanpatrick1\" <button class=\"btn btn-primary\">GitHub</button></a></center>"+       
+            "      <center><a href=\"https://github.com/allanpatrick1\" <button class=\"btn btn-primary\" style=\"background-color: lightseagreen;border-color: lightseagreen;color: black;\">GitHub</button></a></center>"+       
             "    </div>\n" +
             "  </div>\n" +
                     
@@ -122,7 +122,7 @@ public class HomeServlet extends HttpServlet {
             "      <center><h5 class=\"card-title\">Andrey Antunes</h5></center>\n" +
             "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas Fatec - Praia Grande.</p></center>\n" +
             "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +        
-            "       <center><a href=\"https://github.com/AndreyAntunes\" <button class='btn btn-primary'>GitHub</button></a></center>"+
+            "       <center><a href=\"https://github.com/AndreyAntunes\" <button class='btn btn-primary' style=\"background-color: lightseagreen;border-color: lightseagreen;color:black;\">GitHub</button></a></center>"+
             "    </div>\n" +
             "  </div>\n" +
              
@@ -134,7 +134,7 @@ public class HomeServlet extends HttpServlet {
             "      <center><h5 class=\"card-title\">Leticia Santos</h5></center>\n" +
             "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas Fatec - Praia Grande.</p></center>\n" +
             "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +
-            "       <center><a href=\"https://github.com/LeticiaVSantos\" <button class=\"btn btn-primary\" >GitHub</button></a></center>"+        
+            "       <center><a href=\"https://github.com/LeticiaVSantos\" <button class=\"btn btn-primary\" style=\"background-color: lightseagreen;border-color: lightseagreen;color: black;\" >GitHub</button></a></center>"+        
             "    </div>\n" +
             "  </div>\n" +
             "</div>");

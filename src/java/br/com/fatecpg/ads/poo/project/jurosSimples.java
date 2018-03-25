@@ -8,6 +8,7 @@ package br.com.fatecpg.ads.poo.project;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -62,26 +63,27 @@ public class jurosSimples extends HttpServlet {
             "</span>"+
             "</nav>");
             
-            out.println("<center><h1 style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 1%;width: 50%;top: 1%;\">Cálculo de juros simples</h1></center>"+
+            out.println("<center><h1 style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;width: 35%;top: 10% !important;\">Cálculo de juros simples</h1></center>"+
             "<hr/ style=\"background-color: #b8c1c1;\">" +
             
             "<center><form style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative; width: 20%;\">" +
             "<div class='row'>" +
             "<div class='col'>" +
-            "Aplicação:<input type='text' style=\"width: 202px;\" class='form-control' placeholder='aplicacao'><br><br>" +
+            "Aplicação (R$):<input type='text' style=\"width: 200px;\" class='form-control' placeholder='Ex: 1000' name='aplicacao'/><br>" +
             "</div>" + 
                     
             "<div class='col'>" +
-            "Período:<input type='text' style=\"width: 215px;\" class='form-control' placeholder='periodo'><br><br>" +
+            "Período (meses):<input type='text' style=\"width: 200px;\" class='form-control' placeholder='Ex: 3' name='periodo'/><br>" +
             "</div>" +   
 
             "<div class='col'>" +
-            "Taxa:<input type='text' style=\"width: 230px;\" class='form-control' placeholder='taxa'><br><br>" +
+            "Taxa (%):<input type='text' style=\"width: 200px;\" class='form-control' placeholder='Ex: 2' name='taxa'/><br>" +
             "</div>" +         
             
-            "<input class=\"btn btn-primary\" type=\"button\" style=\"width: 280px;\" value='Calcular'/>" +
+                    
+            "<input class=\"btn btn-primary\" type=\"submit\" style=\"width: 200px;position:relative;left:17%;background-color: lightseagreen;border-color: lightseagreen;color:black;\" value='Calcular'/>" +
             "</div>" +
-            "</div>" +      
+            "</div>" +
                     
            
                     
@@ -94,29 +96,32 @@ public class jurosSimples extends HttpServlet {
                 //variáveis.
                 int periodo=Integer.parseInt(request.getParameter("periodo"));
                 double aplicacao=Double.parseDouble(request.getParameter("aplicacao")), taxa=Double.parseDouble(request.getParameter("taxa")), montante;
+                DecimalFormat df = new DecimalFormat("###,##0.00");
                 //se os valores aplicados forem maior do que 0 o sistema aceita.
                 if(aplicacao>0 && taxa>0 && periodo>0){
                    montante=(aplicacao*(taxa*periodo));
-                   out.println("<p style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%\">O montante é de: R$ " +montante+ ".</p>");
+                   out.println("<br>");
+                   out.println("<center style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width:96%\">O montante é de: R$ " +montante+ ".</center>");
                    out.println("<hr/ style=\"background-color: #b8c1c1;\">");
                 }
                 
                 //se os valores aplicados forem menor do que 0 o sistema aponta o erro.
                 else{
-                    out.println("<p style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;\">Ação não concluída. Digite apenas números positivos.");
+                    out.println("<br>");
+                    out.println("<center style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width: 96%;\">Envio não concluído. Preencha os campos com valores positivos.</center>");
                     out.println("<hr/ style=\"background-color: #b8c1c1;\">");
                 }
             }
             //aviso para digitar apenas números.
             catch(NumberFormatException nfe){
                 out.println("<br>");
-                out.println("<p style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width: 22%;\">Lembre-se: Digite apenas valores válidos.");
-                
+                out.println("<center style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width: 96%;\">Lembre-se: Preencha os campos com valores válidos.</center>");
+                out.println("<hr/ style=\"background-color: #b8c1c1;\">");
             }
-            out.println("<br><br>");
-            out.println("<a href='home.php'class=\"btn btn-primary btn-lg active\" role=\"button\" style=\"left: 2%;\" aria-pressed=\"true\">Voltar</a>");
-            out.println("<a href='juros-composto.php' class=\"btn btn-secondary btn-lg active\" role=\"button\" aria-pressed=\"true\"style=\"left: 6%;\">Juros Composto</a><br>");
             
+            out.println("<a href='home.php'class=\"btn btn-primary btn-lg active\" role=\"button\" style=\"position: relative;top: 0%;left: 2%;background-color: lightseagreen;border-color: lightseagreen;color:black;\" aria-pressed=\"true\">Voltar</a>");
+            out.println("<a href='juros-composto.php' class=\"btn btn-secondary btn-lg active\" role=\"button\" aria-pressed=\"true\"style=\"left: 3%;position: relative;background-color: lightseagreen;border-color: lightseagreen;color:black;\">Juros Composto</a><br>");
+            out.println("<br>");
             
             
             /*out.println("<div class=\"container\" style=\"background-color:white;\">" +
