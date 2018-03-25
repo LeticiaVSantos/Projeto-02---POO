@@ -44,7 +44,7 @@ public class HomeServlet extends HttpServlet {
             out.println("<title> JurosWeb </title>");    
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("</head>");
-            out.println("<body>");  
+            out.println("<body style=\"background-color: black;\">");  
             
             out.println("<nav class=\"navbar sticky-top navbar-dark bg-dark\">\n" +
             "<a class=\"navbar-brand\" href=\"home.php\">\n" +         
@@ -58,7 +58,7 @@ public class HomeServlet extends HttpServlet {
             
             out.println("<br>");
             
-            out.println("<div class=\"jumbotron jumbotron-fluid\">\n" +
+            out.println("<div class=\"jumbotron jumbotron-fluid\" style=\"background-color: lightseagreen;\">\n" +
             "<div class=\"container\">\n" +
             "<h1 class=\"display-4\">JurosWeb</h1>\n" +
             "    <p class=\"lead\">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>\n" +
@@ -66,10 +66,10 @@ public class HomeServlet extends HttpServlet {
             "</div>");
             
  
-            out.println("<div class='row'>" + 
+            out.println("<div class='row' style=\"width: 80%;position: relative;left: 7%;\">" + 
             "<div class='col-sm-6'>" +
            "<div class=\"card border-primary mb-3\" style=\"max-width: 30rem;\"\n >" +
-          "<div class='card-body'>" +
+          "<div class='card-body' style=\"background-color: lightsteelblue;border-color: black;\">" +
         "<center><h5 class='card-title'>Juros Simples</h5></center>" +
         "<hr>"+            
         "<p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>" +
@@ -78,9 +78,9 @@ public class HomeServlet extends HttpServlet {
       "</div>" +
     "</div>" +
                     
-  "<div class='col-sm-6'>" +
+  "<div class='col-sm-6' style=\"position: relative;left: 13%;\">" +
      "<div class=\"card border-secondary mb-3\" style=\"max-width: 30rem;\" \n >" +
-      "<div class='card-body'>" +
+      "<div class='card-body' style=\"background-color: lightsteelblue;border-color: black;\">" +
         "<center><h5 class='card-title'>Juros Composto</h5></center>" +
          "<hr>"+            
         "<p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>" +
@@ -93,16 +93,16 @@ public class HomeServlet extends HttpServlet {
             
             out.println("<br>");
             
-            out.println("<div class=\"alert alert-success\" role=\"alert\">\n" +
+            out.println("<div class=\"alert alert-success\" role=\"alert\" style=\"background-color: lightblue;border-color: black;\">\n" +
             "  <center> Conheça nossos desenvolvedores!</center>\n" +
             "</div>");
             out.println("<br>");  
                  
             
-            out.println("<div class=\"card-deck\">\n" +
-            "  <div class=\"card border-primary mb-3\">\n" +
-            "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Allan.jpg\" alt=\"Allan Patrick\" style='width:50%'></center>\n" +
-            "    <div class=\"card-body\">\n" +
+            out.println("<div class=\"card-deck\" style=\"width: 100%;position: relative;left: 1%;\">\n" +
+            "  <div class=\"card border-primary mb-3\" style=\"background-color: #ced5e5;\">\n" +
+            "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Allan.jpg\" alt=\"Allan Patrick\" style=\"width:50%;position: relative;bottom: -5%;\"></center>\n" +
+            "    <div class=\"card-body\" style=\"background-color: #ced5e5;\">\n" +
             "      <center><h5 class=\"card-title\">Allan Patrick</h5></center>\n" +
             "      <center><p class=\"card-text\"> Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
             "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +        
@@ -110,9 +110,9 @@ public class HomeServlet extends HttpServlet {
             "    </div>\n" +
             "  </div>\n" +
                     
-            "  <div class=\"card border-primary mb-3\">\n" +
-            "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Andrey.jpg\" alt=\"Andrey Antunes\"  style='width:50%'></center>\n" +
-            "    <div class=\"card-body\">\n" +
+            "  <div class=\"card border-primary mb-3\" style=\"background-color: #ced5e5;\">\n" +
+            "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Andrey.jpg\" alt=\"Andrey Antunes\"  style=\"width:50%;position: relative;bottom: -5%;\"></center>\n" +
+            "    <div class=\"card-body\" style=\"background-color: #ced5e5;\">\n" +
             "      <center><h5 class=\"card-title\">Andrey Antunes</h5></center>\n" +
             "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
             "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +        
@@ -120,9 +120,9 @@ public class HomeServlet extends HttpServlet {
             "    </div>\n" +
             "  </div>\n" +
                     
-            "  <div class=\"card border-primary mb-3\">\n" +
-            "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Leticia (2).jpg\" alt=\"Leticia Santos\" style='width:50%'></center>\n" +
-            "    <div class=\"card-body\">\n" +
+            "  <div class=\"card border-primary mb-3\" style=\"background-color: #ced5e5;\">\n" +
+            "    <center><img class=\"rounded-circle\" class=\"card-img-top\" src=\"Imagens/Leticia (2).jpg\" alt=\"Leticia Santos\" style=\"width:50%;position: relative;bottom: -5%;\"></center>\n" +
+            "    <div class=\"card-body\" style=\"background-color: #ced5e5;\">\n" +
             "      <center><h5 class=\"card-title\">Leticia Santos</h5></center>\n" +
             "      <center><p class=\"card-text\">Estutande de Análise e Desenvolvimento de Sistemas.</p></center>\n" +
             "      <center><p class=\"card-text\"> Conheça também seus projetos no GitHub.</p></center><br>\n" +

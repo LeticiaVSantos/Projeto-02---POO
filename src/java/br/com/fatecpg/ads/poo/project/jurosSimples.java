@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package br.com.fatecpg.ads.poo.project;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author User
+ * @author Andrey Antunes
  */
 @WebServlet(name = "juros-simples.php", urlPatterns = {"/juros-simples.php"})
 public class jurosSimples extends HttpServlet {
@@ -48,7 +49,7 @@ public class jurosSimples extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("<title>Juros Simples</title>");            
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body style=\"background-color: black;\">");
             out.println("<nav class=\"navbar sticky-top navbar-dark bg-dark\">\n" +
             "<a class=\"navbar-brand\" href=\"home.php\">\n" +         
             "<img src=\"Imagens/cifrao.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\n" +
@@ -60,15 +61,14 @@ public class jurosSimples extends HttpServlet {
             "</span>"+
             "</nav>");
             
-            out.println("<h1>Juros Simples</h1>");
-            out.println("<h4><a href='home.php'>Voltar</a></h4>");
-            out.println("<h2>Cálculo de juros simples</h2>");
-            out.println("<hr/>");
-            out.println("<form>");
-            out.println("Aplicação: <input type='text' name='aplicacao'/>");
-            out.println("Taxa: <input type='text' name='taxa'/>");
-            out.println("Período: <input type='text' name='periodo'/>");
-            out.println("<input type= 'submit' value='Calcular'/>");
+            out.println("<h1 style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 1%;width: 50%;top: 1%;\">Cálculo de juros simples</h1>");
+            out.println("<hr/ style=\"background-color: #b8c1c1;\">");
+            out.println("<form style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width: 21%;\">");
+            out.println("Aplicação: <input type='text' style=\"width: 202px;\" name='aplicacao'/><br><br>");
+            out.println("Período: <input type='text' style=\"width: 215px;\" name='periodo'/><br><br>");
+            out.println("Taxa: <input type='text' style=\"width: 234px;\" name='taxa'/><br><br>");
+            
+            out.println("<input type= 'submit' style=\"width: 280px;\" value='Calcular'/>");
             out.println("</form>");
             out.println("<br>");
             try{
@@ -78,21 +78,31 @@ public class jurosSimples extends HttpServlet {
                 //se os valores aplicados forem maior do que 0 o sistema aceita.
                 if(aplicacao>0 && taxa>0 && periodo>0){
                    montante=(aplicacao*(taxa*periodo));
-                   out.println("O montante é de: " +montante+ ".");
-                   out.println("<hr/>");
+                   out.println("<p style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%\">O montante é de: R$ " +montante+ ".</p>");
+                   out.println("<hr/ style=\"background-color: #b8c1c1;\">");
                 }
+                
                 //se os valores aplicados forem menor do que 0 o sistema aponta o erro.
                 else{
-                    out.println("Ação não concluída. Insira apenas dados válidos.");
-                    out.println("<hr/>");
+                    out.println("<p style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;\">Ação não concluída. Digite apenas números positivos.");
+                    out.println("<hr/ style=\"background-color: #b8c1c1;\">");
                 }
             }
-            //ainda arrumarei alguns detalhes no filtro para o seu melhor funcionamento.
+            //aviso para digitar apenas números.
             catch(NumberFormatException nfe){
-                out.println("Ação não concluída. Insira apenas números!");
-                out.println("<hr/>");
+                out.println("<p style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width: 22%;\">Lembre-se: Digite apenas valores válidos.");
+                out.println("<hr/ style=\"background-color: #b8c1c1;\">");
             }
+            out.println("<h4><a href='home.php' style=\"position: relative;left: 1%;\">Voltar</a></h4>");
+            out.println("<h4><a href='juros-composto.php' style=\"position: relative;left: 1%;\">Juros Composto</a></h4>");
             
+            /*out.println("<div class=\"container\" style=\"background-color:white;\">" +
+  "<h2 style=\"font-family:tahoma; font-size:3rem;\ position: relative;left: 2%">Cálculo de juros simples</h2>" +
+  "<div class=\"panel panel-default\">" +
+    "<div class=\"panel-body\">Preencha todos os campos disponíveis para saber o montante de sua aplicação.</div>" +
+  "</div>" +
+"</div>");*/
+          
             /*css - Footer*/
             out.println("<style>\n" +
             ".footer {\n" +
@@ -108,9 +118,7 @@ public class jurosSimples extends HttpServlet {
             "}\n" +
             "</style>\n" +
             "\n" +
-                   
-                    
-            "<div class=\"footer\">\n" +
+            "<div class=\"footer\"style=\"background-color: ;\">\n" +
                     "<br>" +
                     "<h5>Footer Content</h5>" +
                 "<p>Here you can use rows and columns here to organize your footer content.</p>" +
