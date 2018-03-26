@@ -2,7 +2,7 @@ package br.com.fatecpg.ads.poo.project;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.DecimalFormat;
+import java.text.DecimalFormat; 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -96,26 +96,27 @@ public class jurosComposto extends HttpServlet {
             
             // Configuração do Botão Submit
             try{
-                
+                // Formato das casas decimais
+                DecimalFormat df = new DecimalFormat("0.##");
                 int meses = Integer.parseInt(request.getParameter("meses"));
                 double valor = Double.parseDouble(request.getParameter("valor")); 
                 double juros = Double.parseDouble(request.getParameter("juros")); 
-                double taxa = 0;
-                // Formato das casas decimais
-                DecimalFormat df = new DecimalFormat("###,##0.00");
-                
+                double taxa;
+                                               
+                  
                 // Regra para impedir campo vazio / TRUE
                 if(valor>0 && juros>0 && meses>0){
                     for (int i=0; i<meses; i++) {
                         taxa = valor * (juros/100);
                         valor = valor + taxa;
                     }
-                    
+                    // Limitando as casas decimais da variavel Valor
+                    String total = df.format(valor);
                     out.println("<br>");
                     out.println("<center style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, "
                                 + "0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma; "
                                 + "color: white;position: relative;left: 2%;width:96%\"> "
-                                + "O montante é de: R$ " + valor + ".</center>");
+                                + "O montante é de: R$ " + total + "</center>");
                     out.println("<hr/ style=\"background-color: #b8c1c1;\">");
                 }
                 
