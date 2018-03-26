@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author Allan P. Cabral
  */
+
 @WebServlet(name = "juros-composto.php", urlPatterns = {"/juros-composto.php"})
 public class jurosComposto extends HttpServlet {
 
@@ -31,7 +32,7 @@ public class jurosComposto extends HttpServlet {
                 // Carregando Google Fonts*/
                 out.println("<link href=\'https://fonts.googleapis.com/css?family=PT+Sans\' rel=\'stylesheet\'>");
                 
-                // Carregando Favicon
+                // Carregando FavIcon
                 out.println("<link rel=\'shortcut icon\' href=\'Imagens/favicon (1).ico\' />");
                 out.println("<title> JurosWeb </title>");
                 
@@ -93,7 +94,7 @@ public class jurosComposto extends HttpServlet {
                             
                             + "</div>\n</form>\n</center>\n");
             
-            // Configuração do Botão
+            // Configuração do Botão Submit
             try{
                 
                 int meses = Integer.parseInt(request.getParameter("meses"));
@@ -139,7 +140,7 @@ public class jurosComposto extends HttpServlet {
                     out.println("<hr/ style=\"background-color: #b8c1c1;\">");
                 }
                 
-                // Button de Home/JSimples
+                // Botão de Home/JSimples
                 out.println("<a href='home.php'class=\"btn btn-primary btn-lg active\" "
                             + "role=\"button\" style=\"position: relative;top: 0%;left: 2%;background-color: lightseagreen;"
                             + "border-color: lightseagreen;color:black;\" aria-pressed=\"true\">Voltar</a>");
@@ -148,7 +149,7 @@ public class jurosComposto extends HttpServlet {
                             + "border-color: lightseagreen;color:black;\">Juros Simples</a>");
                 
             
-                /* Config css/footer*/
+                /* Config css/footer */
                 out.println("<style>\n"
                             + ".footer {\n position: fixed;\n left: 0;\n " 
                             + "bottom: 0;\n width: 100%; height:13%;\n "
@@ -161,7 +162,7 @@ public class jurosComposto extends HttpServlet {
                             + "<p>© 2018 Copyright.</p>\n"
                             + "</div>");
                                     
-                /*Java Script - Bootstrap*/
+                /* Java Script - Bootstrap */
                 out.println("<script src=\'https://code.jquery.com/jquery-3.2.1.slim.min.js\' integrity=\'sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\' crossorigin=\'anonymous\'></script>");
                 out.println("<script src=\'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\' integrity=\'sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\' crossorigin=\'anonymous\'></script>");
                 out.println("<script src=\'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\' integrity=\'sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\' crossorigin=\'anonymous\'></script>");
