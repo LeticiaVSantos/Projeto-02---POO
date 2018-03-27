@@ -30,7 +30,7 @@ public class jurosComposto extends HttpServlet {
                 out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
                 
                 // Carregando Google Fonts*/
-                out.println("<link href=\'https://fonts.googleapis.com/css?family=PT+Sans\' rel=\'stylesheet\'>");
+               out.println("<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>");
                 
                 // Carregando FavIcon
                 out.println("<link rel=\'shortcut icon\' href=\'Imagens/favicon (1).ico\' />");
@@ -148,18 +148,20 @@ public class jurosComposto extends HttpServlet {
                 out.println("<a href='juros-simples.php' class=\"btn btn-secondary btn-lg active\" "
                             + "role=\"button\" aria-pressed=\"true\"style=\"left: 3%;position: relative;background-color: lightseagreen;"
                             + "border-color: lightseagreen;color:black;\">Juros Simples</a>");
+                out.println("<br>");
                 
             
                 /* Config css/footer */
                 out.println("<style>\n"
-                            + ".footer {\n position: fixed;\n left: 0;\n " 
+                            + ".footer {\n position: relative;\n left: 0;\n " 
                             + "bottom: 0;\n width: 100%; height:13%;\n "
-                            + "background-color:#82868E;\n font-family: 'PT Sans', sans-serif;\n "
+                            + "background-color:#82868E;\n font-family: 'Raleway', sans-serif;"
                             + "color: black;\n text-align: center;\n "
                             + "}\n </style>\n"
                             
                             + "<div class=\"footer\">\n"
                             + "<br><h5>JurosWeb - A Solução.</h5>\n"
+                            +  "<p>Possui alguma sugestão? Entre em contato pelo nosso email: <a href=\"mailto:example@example.com\">suporte@jurosweb.com.br</a></p>"
                             + "<p>© 2018 Copyright.</p>\n"
                             + "</div>");
                                     

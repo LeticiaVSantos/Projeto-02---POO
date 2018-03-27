@@ -148,8 +148,8 @@ public class jurosSimples extends HttpServlet {
             "\n" +
             "<div class=\"footer\"style=\"background-color: ;\">\n" +
                     "<br>" +
-                    "<h5>Footer Content</h5>" +
-                "<p>Here you can use rows and columns here to organize your footer content.</p>" +
+                    "<h5>JurosWeb - A Solução.</h5>" +
+                "<p>Possui alguma sugestão? Entre em contato pelo nosso email: <a href=\"mailto:example@example.com\">suporte@jurosweb.com.br</a></p>" +
                 "  <p>© 2018 Copyright:</p>\n" +
                 "Projeto Servlests"+    
             "</div>");
