@@ -92,7 +92,7 @@ public class jurosComposto extends HttpServlet {
                             + "border-color: lightseagreen;color:black;\' "
                             + "value='Calcular'/></div>\n "
                             
-                            + "</div>\n</form>\n</center>\n");
+                            + "</div>\n</form>\n</center><br>\n");
             
             // Configuração do Botão Submit
             try{
@@ -106,10 +106,27 @@ public class jurosComposto extends HttpServlet {
                   
                 // Regra para impedir campo vazio / TRUE
                 if(valor>0 && juros>0 && meses>0){
+                    out.println("<div class=\"container\"><center><table class=\"table\">");
+                    out.println("<thead class=\"thead-light\"><tr>");
+                    out.println("<th scope=\"col\"> <center>Mês</center </th><th scope=\"col\"> <center>Valor da Parcela</center> </th>");
+                    out.println("</tr></thead>");
                     for (int i=0; i<meses; i++) {
                         taxa = valor * (juros/100);
                         valor = valor + taxa;
+                        
+                        String total = df.format(valor);
+                        
+                        /*tabela - resultado do montante */
+                        out.println("<tbody><tr class=\"container table-light\"><td><center>"+(i+1)+"</center></td><td><center>R$ "+total+"</center></td></tr>");
+                        
+                        out.println("<center style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, "
+                                + "0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma; "
+                                + "color: white;position: relative;left: 2%;width:96%\"> "
+                                + "O montante é de: R$ " + total + "</center>");
+                        out.println("<hr/ style=\"background-color: #b8c1c1;\">"); 
                     }
+                    
+                    out.println("</table></center><div class=\"container\">");
                     // Limitando as casas decimais da variavel Valor
                     String total = df.format(valor);
                     out.println("<br>");

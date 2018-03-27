@@ -38,14 +38,20 @@ public class HomeServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+             /*Tag meta Responsiva*/
             out.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+             /*Google fonts - footer*/
             out.println("<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>");
+             /*Favicon*/
             out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1).ico\" />");
+            
             out.println("<title> JurosWeb </title>");    
+             /*css - Bootstrap*/
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
             out.println("</head>");
             out.println("<body style=\"background-color: black;\">");  
             
+             /*inicio NavBar*/
             out.println("<nav class=\"navbar sticky-top navbar-dark bg-dark\">\n" +
             "<a class=\"navbar-brand\" href=\"home.php\">\n" +         
             "<img src=\"Imagens/cifrao.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\">\n" +
@@ -58,6 +64,7 @@ public class HomeServlet extends HttpServlet {
             
             out.println("<br>");
             
+             /*Inicio Jumbotron*/
             out.println("<div class=\"jumbotron jumbotron-fluid\" style=\"background-color: lightseagreen;\">\n" +
             "<div class=\"container\">\n" +
             "<h1 class=\"display-4\">JurosWeb</h1>\n" +
@@ -65,7 +72,7 @@ public class HomeServlet extends HttpServlet {
             "</div>\n" +
             "</div>");
             
- 
+             /*Inicio Cards de calculo de juros*/
             out.println("<div class='row' style=\"width: 80%;position: relative;left: 7%;\">" + 
             "<div class='col-sm-6'>" +
             "<div class=\"card border-primary mb-3\" style=\"max-width: 30rem;\"\n >" +
@@ -97,11 +104,13 @@ public class HomeServlet extends HttpServlet {
             
             out.println("<br>");
             
+            /*Alert - Usado para divulgar os desenvolvedores*/
             out.println("<div class=\"alert alert-success\" role=\"alert\" style=\"background-color: lightblue;border-color: black;\">\n" +
             "  <center> Conheça nossos desenvolvedores!</center>\n" +
             "</div>");
             out.println("<br>");  
                  
+            /*Inicio Cards de desenvolvedores*/
             
             out.println("<div class=\"card-deck\" style=\"width: 100%;position: relative;left: 1%;\">\n" +
             "  <div class=\"card border-primary mb-3\" style=\"background-color: #ced5e5;\">\n" +
