@@ -88,7 +88,7 @@ public class jurosComposto extends HttpServlet {
                             
                             // Botão Submit 
                             + "<input class=\'btn btn-primary\' type=\'submit\' "
-                            + "style=\'width: 200px;position:relative;left:17%;background-color: lightseagreen; "
+                            + "style=\'width: 200px;position:relative;left:16%;background-color: lightseagreen; "
                             + "border-color: lightseagreen;color:black;\' "
                             + "value='Calcular'/></div>\n "
                             
@@ -107,8 +107,8 @@ public class jurosComposto extends HttpServlet {
                 // Regra para impedir campo vazio / TRUE
                 if(valor>0 && juros>0 && meses>0){
                     out.println("<div class=\"container\"><center><table class=\"table\">");
-                    out.println("<thead class=\"thead-light\"><tr>");
-                    out.println("<th scope=\"col\"> <center>Mês</center </th><th scope=\"col\"> <center>Valor da Parcela</center> </th>");
+                    out.println("<thead class=\"thead-dark\"><tr class=\"table-active\">");
+                    out.println("<th scope=\"row\"> <center>Mês</center </th><th scope=\"row\"> <center>Valor da Parcela</center> </th>");
                     out.println("</tr></thead>");
                     for (int i=0; i<meses; i++) {
                         taxa = valor * (juros/100);
@@ -117,24 +117,14 @@ public class jurosComposto extends HttpServlet {
                         String total = df.format(valor);
                         
                         /*tabela - resultado do montante */
-                        out.println("<tbody><tr class=\"container table-light\"><td><center>"+(i+1)+"</center></td><td><center>R$ "+total+"</center></td></tr>");
+                        out.println("<tbody><tr class=\"container table table-hover\"><td><center>"+(i+1)+"</center></td><td><center>R$ "+total+"</center></td></tr>");
                         
-                        out.println("<center style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, "
-                                + "0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma; "
-                                + "color: white;position: relative;left: 2%;width:96%\"> "
-                                + "O montante é de: R$ " + total + "</center>");
-                        out.println("<hr/ style=\"background-color: #b8c1c1;\">"); 
                     }
                     
                     out.println("</table></center><div class=\"container\">");
                     // Limitando as casas decimais da variavel Valor
                     String total = df.format(valor);
-                    out.println("<br>");
-                    out.println("<center style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, "
-                                + "0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma; "
-                                + "color: white;position: relative;left: 2%;width:96%\"> "
-                                + "O montante é de: R$ " + total + "</center>");
-                    out.println("<hr/ style=\"background-color: #b8c1c1;\">");
+                    
                 }
                 
                 // Regra / FALSE
@@ -175,7 +165,7 @@ public class jurosComposto extends HttpServlet {
                              "<h5>JurosWeb - A Solução.</h5>" +
                              "<p>Possui alguma sugestão? Entre em contato pelo nosso email: <a href=\"mailto:example@example.com\">suporte@jurosweb.com.br</a></p>" +
                              "<p>© 2018 Copyright:</p>\n" +
-                             "Projeto Servlets"+  
+                             "<a href='https://github.com/LeticiaVSantos/Projeto-02---POO'</a> Projeto Servlets"+  
                     
                              "</footer></center>");
                                     

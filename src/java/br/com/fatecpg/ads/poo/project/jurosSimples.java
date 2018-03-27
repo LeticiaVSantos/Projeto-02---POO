@@ -142,7 +142,7 @@ public class jurosSimples extends HttpServlet {
                              "<h5>JurosWeb - A Solução.</h5>" +
                              "<p>Possui alguma sugestão? Entre em contato pelo nosso email: <a href=\"mailto:example@example.com\">suporte@jurosweb.com.br</a></p>" +
                              "<p>© 2018 Copyright:</p>\n" +
-                             "Projeto Servlets"+  
+                             "\"<a href='https://github.com/LeticiaVSantos/Projeto-02---POO'</a> Projeto Servlets"+  
                     
                              "</footer></center>");
             
