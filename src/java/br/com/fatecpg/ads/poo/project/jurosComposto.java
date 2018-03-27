@@ -150,20 +150,17 @@ public class jurosComposto extends HttpServlet {
                             + "border-color: lightseagreen;color:black;\">Juros Simples</a>");
                 out.println("<br><br>");
                 
-            
-                /* Config css/footer */
-                out.println("<style>\n"
-                            + ".footer {\n position: relative;\n left: 0;\n " 
-                            + "bottom: 0;\n width: 100%; height:13%;\n "
-                            + "background-color:#82868E;\n font-family: 'Raleway', sans-serif;"
-                            + "color: black;\n text-align: center;\n "
-                            + "}\n </style>\n"
-                            
-                            + "<div class=\"footer\">\n"
-                            + "<br><h5>JurosWeb - A Solução.</h5>\n"
-                            +  "<p>Possui alguma sugestão? Entre em contato pelo nosso email: <a href=\"mailto:example@example.com\">suporte@jurosweb.com.br</a></p>"
-                            + "<p>© 2018 Copyright.</p>\n"
-                            + "</div>");
+                            /* Footer */
+                
+                             out.println("<hr><center><footer class=\"footer\">" +
+                             "<br>" +
+                    
+                             "<h5>JurosWeb - A Solução.</h5>" +
+                             "<p>Possui alguma sugestão? Entre em contato pelo nosso email: <a href=\"mailto:example@example.com\">suporte@jurosweb.com.br</a></p>" +
+                             "<p>© 2018 Copyright:</p>\n" +
+                             "Projeto Servlets"+  
+                    
+                             "</footer></center>");
                                     
                 /* Java Script - Bootstrap */
                 out.println("<script src=\'https://code.jquery.com/jquery-3.2.1.slim.min.js\' integrity=\'sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\' crossorigin=\'anonymous\'></script>");

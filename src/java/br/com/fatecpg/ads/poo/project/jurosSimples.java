@@ -125,7 +125,6 @@ public class jurosSimples extends HttpServlet {
             
             out.println("<a href='home.php'class=\"btn btn-primary btn-lg active\" role=\"button\" style=\"position: relative;top: 0%;left: 2%;background-color: lightseagreen;border-color: lightseagreen;color:black;\" aria-pressed=\"true\">Voltar</a>");
             out.println("<a href='juros-composto.php' class=\"btn btn-secondary btn-lg active\" role=\"button\" aria-pressed=\"true\"style=\"left: 3%;position: relative;background-color: lightseagreen;border-color: lightseagreen;color:black;\">Juros Composto</a><br>");
-            out.println("<br>");
             
             
             /*out.println("<div class=\"container\" style=\"background-color:white;\">" +
@@ -135,29 +134,17 @@ public class jurosSimples extends HttpServlet {
   "</div>" +
 "</div>");*/
           
-            /*css - Footer*/
-            out.println("<style>\n" +
-            ".footer {\n" +
-            "    position: relative;\n" +
-            "    left: 0;\n" +
-            "    bottom: 0;\n" +
-            "    width: 100%;\n" +
-            "    height:19%;\n " +        
-            "    background-color:#82868E;\n" +
-            "    font-family: 'Raleway', sans-serif;" +      
-            "    color: black;\n" +
-            "    text-align: center;\n" +
-            "}\n" +
-            "</style>\n" +
-            "\n" +
-            "<div class=\"footer\"style=\"background-color: ;\">\n" +
-                    "<br>" +
-                    "<h5>JurosWeb - A Solução.</h5>" +
-                "<p>Possui alguma sugestão? Entre em contato pelo nosso email: <a href=\"mailto:example@example.com\">suporte@jurosweb.com.br</a></p>" +
-                "  <p>© 2018 Copyright:</p>\n" +
-                "Projeto Servlests"+    
-            "</div>");
-            /*fim css - Footer*/
+             /* Footer */
+                
+                             out.println("<hr><center><footer class=\"footer\">" +
+                             "<br>" +
+                    
+                             "<h5>JurosWeb - A Solução.</h5>" +
+                             "<p>Possui alguma sugestão? Entre em contato pelo nosso email: <a href=\"mailto:example@example.com\">suporte@jurosweb.com.br</a></p>" +
+                             "<p>© 2018 Copyright:</p>\n" +
+                             "Projeto Servlets"+  
+                    
+                             "</footer></center>");
             
              /*Java Script - Bootstrap*/
             out.println("<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n");
