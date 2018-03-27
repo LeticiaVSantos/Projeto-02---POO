@@ -148,7 +148,7 @@ public class jurosComposto extends HttpServlet {
                 out.println("<a href='juros-simples.php' class=\"btn btn-secondary btn-lg active\" "
                             + "role=\"button\" aria-pressed=\"true\"style=\"left: 3%;position: relative;background-color: lightseagreen;"
                             + "border-color: lightseagreen;color:black;\">Juros Simples</a>");
-                out.println("<br>");
+                out.println("<br><br>");
                 
             
                 /* Config css/footer */

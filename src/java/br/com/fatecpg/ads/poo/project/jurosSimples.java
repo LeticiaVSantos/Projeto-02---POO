@@ -95,13 +95,17 @@ public class jurosSimples extends HttpServlet {
             try{
                 //variáveis.
                 int periodo=Integer.parseInt(request.getParameter("periodo"));
-                double aplicacao=Double.parseDouble(request.getParameter("aplicacao")), taxa=Double.parseDouble(request.getParameter("taxa")), montante;
+                float aplicacao=Float.parseFloat(request.getParameter("aplicacao")), taxa=Float.parseFloat(request.getParameter("taxa")), montante;
                 DecimalFormat df = new DecimalFormat("###,##0.00");
                 //se os valores aplicados forem maior do que 0 o sistema aceita.
+                
+               taxa =(taxa/100);
+                
                 if(aplicacao>0 && taxa>0 && periodo>0){
                    montante=(aplicacao*(taxa*periodo));
+                   float ValorFinal = (aplicacao + montante);
                    out.println("<br>");
-                   out.println("<center style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width:96%\">O montante é de: R$ " +montante+ ".</center>");
+                   out.println("<center style=\"text-shadow: 1px 0px 0px #122b68, -1px 0px 0px #122b68, 0px 1px 0px #122b68, 0px -1px 0px #122b68;font-family: tahoma;color: white;position: relative;left: 2%;width:96%\">O montante é de: R$ " +ValorFinal+ ".</center>");
                    out.println("<hr/ style=\"background-color: #b8c1c1;\">");
                 }
                 
