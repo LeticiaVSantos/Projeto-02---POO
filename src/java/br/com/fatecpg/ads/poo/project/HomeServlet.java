@@ -43,8 +43,9 @@ public class HomeServlet extends HttpServlet {
              /*Google fonts - footer*/
             out.println("<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>");
              /*Favicon*/
+
             out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon (1)_1.ico\" />");
-            
+
             out.println("<title> JurosWeb </title>");    
              /*css - Bootstrap*/
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
